@@ -1,0 +1,49 @@
+.team {
+    background-color: #F5F4FA;
+    padding: 94px 0;
+
+    &__title {
+        margin-bottom: 50px;
+    }
+    
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    
+    &__item {
+        background-color: white;
+        text-align: center;
+        width: 270px;
+        border-radius: 0 0 4px 4px;
+        box-shadow: 0 2px 2px #757575;
+        margin-bottom: 10px;
+    }
+    
+    &__info-box {
+        padding: 30px;
+    }
+    
+    &__name {
+        font-size: 16px;
+        font-weight: 500;
+        color: var(--color-main-text);
+        margin: 0 auto 10px auto;
+    }
+    
+    &__profes {
+        font-size: 16px;
+        color: var(--color-secondary-text);
+        margin-bottom: 16px;
+    }
+}
+
+.social__icon--grey {
+    fill: #AFB1B8;
+    transition: fill var(--anim-link);
+}
+
+.social__link:hover .social__icon--grey {
+    fill: #fff;
+}

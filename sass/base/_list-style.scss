@@ -1,0 +1,13 @@
+.list {
+    list-style: none;
+}
+
+.link-style {
+    line-height: 1.7;
+    text-decoration: none;
+    transition: color var(--anim-link);
+}
+
+.link-style:hover {
+    color: var(--color-theme);
+}

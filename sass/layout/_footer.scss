@@ -1,0 +1,128 @@
+.footer {
+    background-color: #2F303A;
+    padding: 60px 0;
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    &__item:first-child {
+        width: 231px;
+        margin-right: 70px;
+    }
+    
+    &__item:nth-child(2) {
+        width: 207px;
+    }
+    
+    &__item:nth-child(3) {
+        width: 570px;
+        margin-left: auto;
+    }
+}
+
+.logo--white {
+    color: white;
+    padding: 0;
+}
+
+.contacts--top {
+    margin-top: 20px;
+}
+
+.contacts__item--bottom {
+    margin-bottom: 9px;
+}
+
+.contacts__link--footer {
+    font-style: normal;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.footer__title-social {
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.social__icon--white {
+    fill: #fff;
+}
+
+.social__link--grey {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.social__link--grey:hover {
+    background-color: var(--color-theme);
+}
+
+.subscribe {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.subscribe__group {
+    display: inline-flex;
+    flex-direction: column;
+    width: 358px;
+    margin-right: 12px;
+}
+
+.subscribe__label {
+    font-weight: bold;
+    color: white;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.subscribe__field {
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    height: 50px;
+    width: 100%;
+    padding: 0 16px;
+    outline: transparent;
+    color: #fff;
+    transition: border-color var(--anim-link);
+}
+
+.subscribe__field:focus {
+    border-color: var(--color-theme);
+}
+
+.subscribe__field::placeholder {
+    font-size: 16px;
+    line-height: 1.25;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.subscribe__btn {
+    background-color: var(--color-theme);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 200px;
+    transition: background-color var(--anim-link);
+}
+
+.subscribe__btn:hover {
+    background-color: var(--color-btn-hover);
+}
+
+.subscribe__btn-text {
+    color: white;
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+.subscribe__btn-icon {
+    fill: #fff;
+}

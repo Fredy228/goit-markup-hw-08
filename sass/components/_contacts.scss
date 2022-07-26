@@ -1,0 +1,17 @@
+.contacts {
+
+    &__icone {
+        fill: currentColor;
+        margin-right: 10px;
+    }
+    
+    &__item:last-child {
+        margin: 0;
+    }
+    
+    &__address {
+        line-height: 1.7;
+        font-style: normal;
+        color: white;
+    }
+}
