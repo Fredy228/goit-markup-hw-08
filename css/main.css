@@ -563,10 +563,35 @@ body.no-scroll {
 .intro {
   background-color: #2F303A;
   padding: 200px 0;
-  background-image: url(../images/intro/intro-bg.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  background-image: url(../images/intro/intro_mob.jpg);
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .intro {
+    background-image: url(../images/intro/intro_mob@2x.jpg);
+  }
+}
+@media screen and (min-width: 768px) {
+  .intro {
+    background-image: url(../images/intro/intro_tab.jpg);
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .intro {
+    background-image: url(../images/intro/intro_tab@2x.jpg);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .intro {
+    background-image: url(../images/intro/intro_desk.jpg);
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .intro {
+    background-image: url(../images/intro/intro_desk@2x.jpg);
+  }
 }
 .intro__inner {
   text-align: center;

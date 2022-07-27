@@ -1,10 +1,42 @@
 .intro {
     background-color: #2F303A;
     padding: 200px 0;
-    background-image: url(../images/intro/intro-bg.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    background-image: url(../images/intro/intro_mob.jpg);
+
+	// Для ретіна екранів мобільна версія
+	@media (min-device-pixel-ratio: 2),
+		(-webkit-min-device-pixel-ratio: 2),
+		(min-resolution: 192dpi),
+		(min-resolution: 2dppx) {
+		background-image: url(../images/intro/intro_mob@2x.jpg);
+	}
+
+	@media screen and (min-width: 768px) {
+		background-image: url(../images/intro/intro_tab.jpg);
+
+		// Для ретіна екранів планшетна версія
+		@media (min-device-pixel-ratio: 2),
+			(-webkit-min-device-pixel-ratio: 2),
+			(min-resolution: 192dpi),
+			(min-resolution: 2dppx) {
+			background-image: url(../images/intro/intro_tab@2x.jpg);
+		}
+	}
+
+	@media screen and (min-width: 1200px) {
+		background-image: url(../images/intro/intro_desk.jpg);
+
+		// Для ретіна екранів десктопна версія
+		@media (min-device-pixel-ratio: 2),
+			(-webkit-min-device-pixel-ratio: 2),
+			(min-resolution: 192dpi),
+			(min-resolution: 2dppx) {
+			background-image: url(../images/intro/intro_desk@2x.jpg);
+		}
+	}
 
     &__inner {
        text-align: center; 
