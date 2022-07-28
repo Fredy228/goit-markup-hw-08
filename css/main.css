@@ -259,9 +259,14 @@ body.no-scroll {
 }
 
 .section-title {
-  font-size: 36px;
   font-weight: bold;
   text-align: center;
+  font-size: 28px;
+}
+@media screen and (min-width: 1200px) {
+  .section-title {
+    font-size: 36px;
+  }
 }
 
 .social {
@@ -775,12 +780,6 @@ body.no-scroll {
 }
 .team__title {
   margin-bottom: 30px;
-  font-size: 28px;
-}
-@media screen and (min-width: 1200px) {
-  .team__title {
-    font-size: 36px;
-  }
 }
 .team__list {
   margin: 0 auto;
@@ -812,7 +811,6 @@ body.no-scroll {
 @media screen and (min-width: 1200px) {
   .team__item {
     width: calc((100% - 120px) / 4);
-    margin: 15px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -856,10 +854,20 @@ body.no-scroll {
 }
 
 .clients {
-  padding: 94px 0;
+  padding: 60px 0;
+}
+@media screen and (min-width: 1200px) {
+  .clients {
+    padding: 94px 0;
+  }
 }
 .clients__title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .clients__title {
+    margin-bottom: 50px;
+  }
 }
 .clients__list {
   display: -webkit-box;
@@ -867,13 +875,21 @@ body.no-scroll {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin: -15px;
 }
 .clients__item {
-  margin-right: 30px;
-  width: calc((100% - 150px) / 6);
+  width: calc((100% - 60px) / 2);
+  margin: 15px;
 }
-.clients__item:nth-child(6n) {
-  margin-right: 0;
+@media screen and (min-width: 768px) {
+  .clients__item {
+    width: calc((100% - 90px) / 3);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients__item {
+    width: calc((100% - 180px) / 6);
+  }
 }
 .clients__link {
   display: -webkit-box;
@@ -885,12 +901,22 @@ body.no-scroll {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 170px;
+  width: 210px;
   height: 92px;
   border: 1px solid #AFB1B8;
   border-radius: 4px;
   -webkit-transition: border-color var(--anim-link);
   transition: border-color var(--anim-link);
+}
+@media screen and (min-width: 768px) {
+  .clients__link {
+    width: 226px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients__link {
+    width: 170px;
+  }
 }
 .clients__icon {
   fill: #AFB1B8;

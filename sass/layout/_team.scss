@@ -8,11 +8,6 @@
 
     &__title {
         margin-bottom: 30px;
-        font-size: 28px;
-
-        @media screen and (min-width: 1200px) {
-            font-size: 36px;
-        }
     }
     
     &__list {
@@ -39,7 +34,6 @@
 
         @media screen and (min-width: 1200px) {
             width: calc((100% - 4 * 30px) / 4);
-            margin: 15px;
         }
     }
 
