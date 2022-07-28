@@ -1,6 +1,6 @@
 .intro {
     background-color: #2F303A;
-    padding: 200px 0;
+    padding: 118px 0;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -28,6 +28,7 @@
 
 	@media screen and (min-width: 1200px) {
 		background-image: url(../images/intro/intro_desk.jpg);
+        padding: 200px 0;
 
 		// Для ретіна екранів десктопна версія
 		@media (min-device-pixel-ratio: 2),
@@ -50,13 +51,21 @@
     }
 
     &__title {
-        font-size: 44px;
+        font-size: 26px;
         line-height: 1.3;
         font-weight: 700;
         text-transform: uppercase;
         width: 650px;
         text-align: center;
         color: white;
+
+        @media screen and (min-width: 768px) {
+            font-size: 28px;
+        }
+
+        @media screen and (min-width: 1200px) {
+            font-size: 44px;
+        }
     }
 
     &__btn {
