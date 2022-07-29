@@ -198,11 +198,6 @@ body.no-scroll {
 .modal {
   width: 100%;
   height: 100%;
-  display: table;
-}
-.modal__table {
-  vertical-align: middle;
-  text-align: center;
 }
 .modal__inner {
   height: auto;
