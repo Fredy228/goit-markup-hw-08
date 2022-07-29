@@ -21,6 +21,33 @@
     &__link:hover {
         background-color: var(--color-theme);
     }
+
+    &__nav-mobile {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__item-mobile {
+        font-size: 18px;
+        color: #21212134;
+        margin-bottom: 5px;
+    }
+
+    &__link-mobile {
+      font-weight: medium;
+      color: var(--color-theme); 
+      text-decoration: none;
+    }
+
+    &__link-mobile:hover,
+    &__link-mobile:focus {
+        color: var(--color-secondary-text);
+    }
+
+    &__span {
+        margin: 0 10px;
+    }
 }
 
 
