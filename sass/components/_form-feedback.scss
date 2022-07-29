@@ -104,8 +104,12 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        left: 15px;
+        left: 0;
         cursor: pointer;
+
+        @media screen and (min-width:1200px) {
+            left: 15px;
+        }
     }
     
     &__checkbox-icon {
@@ -129,6 +133,12 @@
         letter-spacing: 0.03em;
         color: var(--color-secondary-text);
         cursor: pointer;
+        font-size: 12px;
+
+        @media screen and (min-width: 1200px) {
+            padding-left: 23px;
+            font-size: 14px;
+        }
     }
     
     

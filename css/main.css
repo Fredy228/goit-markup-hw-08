@@ -177,16 +177,30 @@ body.no-scroll {
 }
 
 .backdrop {
+  position: fixed;
   visibility: visible;
   pointer-events: initial;
   opacity: 1;
   z-index: 1000;
-  position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.25);
+  overflow: auto;
+}
+@media screen and (max-width: 479px) {
+  .backdrop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 .backdrop.is-hidden {
   visibility: hidden;
@@ -195,17 +209,36 @@ body.no-scroll {
 }
 
 .modal {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+}
+.modal__inner {
   height: auto;
-  width: 528px;
   background-color: #fff;
   border-radius: 4px;
   -webkit-box-shadow: 0 3px 3px rgba(117, 117, 117, 0.5450980392);
           box-shadow: 0 3px 3px rgba(117, 117, 117, 0.5450980392);
+  width: 95%;
+  position: relative;
+}
+@media screen and (min-width: 480px) {
+  .modal {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 1199px) {
+  .modal {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+  }
 }
 .modal__btn-close {
   position: absolute;
@@ -456,8 +489,13 @@ body.no-scroll {
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  left: 15px;
+  left: 0;
   cursor: pointer;
+}
+@media screen and (min-width: 1200px) {
+  .feedback__checkbox-custom {
+    left: 15px;
+  }
 }
 .feedback__checkbox-icon {
   fill: #fff;
@@ -477,6 +515,13 @@ body.no-scroll {
   letter-spacing: 0.03em;
   color: var(--color-secondary-text);
   cursor: pointer;
+  font-size: 12px;
+}
+@media screen and (min-width: 1200px) {
+  .feedback__label-checkbox {
+    padding-left: 23px;
+    font-size: 14px;
+  }
 }
 .feedback__btn {
   width: 200px;
@@ -1088,6 +1133,12 @@ body.no-scroll {
     margin-left: auto;
   }
 }
+.footer__title-social {
+  text-transform: uppercase;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
 
 .logo--white {
   color: white;
@@ -1105,13 +1156,6 @@ body.no-scroll {
 .contacts__link--footer {
   font-style: normal;
   color: rgba(255, 255, 255, 0.6);
-}
-
-.footer__title-social {
-  text-transform: uppercase;
-  color: white;
-  font-weight: bold;
-  margin-bottom: 20px;
 }
 
 .social__icon--white {
@@ -1153,11 +1197,9 @@ body.no-scroll {
     width: 570px;
   }
 }
-
 .subscribe__group {
   width: 100%;
 }
-
 .subscribe__label {
   font-weight: bold;
   color: white;
@@ -1165,7 +1207,6 @@ body.no-scroll {
   text-transform: uppercase;
   line-height: 1.15;
 }
-
 .subscribe__field {
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -1189,41 +1230,34 @@ body.no-scroll {
     margin: 20px 8px 0 0;
   }
 }
-
 .subscribe__field:focus {
   border-color: var(--color-theme);
 }
-
 .subscribe__field::-webkit-input-placeholder {
   font-size: 16px;
   line-height: 1.25;
   color: rgba(255, 255, 255, 0.6);
 }
-
 .subscribe__field::-moz-placeholder {
   font-size: 16px;
   line-height: 1.25;
   color: rgba(255, 255, 255, 0.6);
 }
-
 .subscribe__field:-ms-input-placeholder {
   font-size: 16px;
   line-height: 1.25;
   color: rgba(255, 255, 255, 0.6);
 }
-
 .subscribe__field::-ms-input-placeholder {
   font-size: 16px;
   line-height: 1.25;
   color: rgba(255, 255, 255, 0.6);
 }
-
 .subscribe__field::placeholder {
   font-size: 16px;
   line-height: 1.25;
   color: rgba(255, 255, 255, 0.6);
 }
-
 .subscribe__btn {
   background-color: var(--color-theme);
   display: -webkit-inline-box;
@@ -1240,17 +1274,14 @@ body.no-scroll {
   -webkit-transition: background-color var(--anim-link);
   transition: background-color var(--anim-link);
 }
-
 .subscribe__btn:hover {
   background-color: var(--color-btn-hover);
 }
-
 .subscribe__btn-text {
   color: white;
   font-weight: 700;
   margin-right: 10px;
 }
-
 .subscribe__btn-icon {
   fill: #fff;
 }/*# sourceMappingURL=main.css.map */
