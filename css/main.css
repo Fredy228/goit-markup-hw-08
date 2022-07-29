@@ -951,7 +951,7 @@ body.no-scroll {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 210px;
+  max-width: 210px;
   height: 92px;
   border: 1px solid #AFB1B8;
   border-radius: 4px;
@@ -981,21 +981,35 @@ body.no-scroll {
 }
 
 .portfolio {
-  padding: 94px 0 64px 0;
+  padding: 60px 0;
+}
+@media screen and (min-width: 768px) {
+  .portfolio {
+    padding: 94px 0;
+  }
 }
 .portfolio__btn-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+@media screen and (min-width: 768px) {
+  .portfolio__btn-list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 .portfolio__btn-item {
-  margin: 0 4px;
+  margin-bottom: 15px;
 }
-.portfolio__item {
-  margin-bottom: 34px;
+.portfolio__btn-item:not(:last-child) {
+  margin-right: 4px;
+}
+.portfolio__item:first-child {
+  margin-bottom: 20px;
 }
 .portfolio__btn {
   line-height: 1.6;
@@ -1026,24 +1040,33 @@ body.no-scroll {
   -webkit-box-shadow: 0 3px 3px rgba(117, 117, 117, 0.5450980392);
           box-shadow: 0 3px 3px rgba(117, 117, 117, 0.5450980392);
 }
-.portfolio__card-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+@media screen and (min-width: 768px) {
+  .portfolio__card-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: -15px;
+  }
 }
 .portfolio__card-item {
-  width: calc((100% - 60px) / 3);
-  margin-right: 30px;
   margin-bottom: 30px;
   -webkit-transition: -webkit-box-shadow var(--anim-link);
   transition: -webkit-box-shadow var(--anim-link);
   transition: box-shadow var(--anim-link);
   transition: box-shadow var(--anim-link), -webkit-box-shadow var(--anim-link);
 }
-.portfolio__card-item:nth-child(3n) {
-  margin-right: 0;
+@media screen and (min-width: 768px) {
+  .portfolio__card-item {
+    margin: 15px;
+    width: calc((100% - 60px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio__card-item {
+    width: calc((100% - 90px) / 3);
+  }
 }
 .portfolio__card-item:hover {
   -webkit-box-shadow: 1px 2px 4px 1px #AFB1B8;
