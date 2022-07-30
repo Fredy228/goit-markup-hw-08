@@ -211,6 +211,12 @@ body.no-scroll {
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  overflow: auto;
+}
+@media screen and (max-height: 640px) {
+  .modal__inner {
+    height: 90vh;
+  }
 }
 @media screen and (min-width: 480px) and (max-width: 1199px) {
   .modal__inner {
